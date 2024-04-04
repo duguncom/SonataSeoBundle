@@ -145,6 +145,6 @@ final class SeoExtension extends AbstractExtension
 
     private function normalize(string $string): string
     {
-        return htmlentities(strip_tags($string), \ENT_COMPAT, $this->encoding);
+        return htmlspecialchars(strip_tags($string), \ENT_COMPAT, $this->encoding);
     }
 }
